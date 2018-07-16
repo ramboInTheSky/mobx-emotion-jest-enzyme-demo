@@ -32,6 +32,6 @@ export const Album = ({ data, name }) => (
 )
 
 Album.propTypes = {
-    data: PropTypes.array.isRequired,
-    name: PropTypes.string.isRequired
+    data: PropTypes.array,
+    name: PropTypes.string
 }

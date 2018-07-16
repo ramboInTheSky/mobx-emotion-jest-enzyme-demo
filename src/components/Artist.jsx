@@ -56,6 +56,6 @@ export class Artist extends PureComponent {
 }
 
 Artist.propTypes = {
-    data: PropTypes.array.isRequired,
-    name: PropTypes.string.isRequired
+    data: PropTypes.array,
+    name: PropTypes.string
 }

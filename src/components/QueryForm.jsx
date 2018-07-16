@@ -31,6 +31,6 @@ export class QueryForm extends React.PureComponent {
 
 
 QueryForm.propTypes = {
-    handleChangeQuery: PropTypes.func.isRequired,
-    count: PropTypes.number.isRequired
+    handleChangeQuery: PropTypes.func,
+    count: PropTypes.number
 }

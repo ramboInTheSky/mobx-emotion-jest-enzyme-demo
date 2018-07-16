@@ -7,8 +7,8 @@ import { sortByArtists } from '../helpers'
 export class ResultView extends PureComponent {
 
     render() {
-        const { data: { results } } = this.props
-
+        const { data } = this.props
+        const results = data? data.results : []
         const sortedResults = results && results.length
             ? sortByArtists(results)
             : {}
@@ -30,5 +30,5 @@ export class ResultView extends PureComponent {
 }
 
 ResultView.propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object
 }

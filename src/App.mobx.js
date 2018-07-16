@@ -33,7 +33,7 @@ export default observer(
         
         {
           data?
-              <ResultView data={data} />
+              <ResultView data={data || {}} />
             :null
         }
         </div>
