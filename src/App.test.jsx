@@ -61,10 +61,7 @@ it('call the API and all goes well', () => {
 
   const app = mount(< App />)
   const input = app.find('input').first()
-  const event = { target: { name: "pollName", value: "Led Zeppelin" } };
+  const event = { target: { value: "Led Zeppelin" } };
   input.simulate('change', event);
-  // input.simulate('change', {
-  //   currentTarget: { value: 'Led Zeppelin' }
-  // })
   expect(FetchLib.fetchData).toHaveBeenCalledWith('Led Zeppelin')
 });
