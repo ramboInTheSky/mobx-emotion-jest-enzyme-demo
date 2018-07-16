@@ -16,8 +16,8 @@ import {
 configure({ adapter: new Adapter() })
 
 it('renders without errors', () => {
-            shallow(<App /> );
-        })
+  shallow(<App />);
+})
 
 it('call the API and all goes well', () => {
   jest.spyOn(FetchLib, 'fetchData').mockImplementation(() => Promise.resolve({
@@ -61,8 +61,10 @@ it('call the API and all goes well', () => {
 
   const app = mount(< App />)
   const input = app.find('input').first()
-  input.simulate('change', {
-    currentTarget: { value: 'Led Zeppelin' }
-  })
+  const event = { target: { name: "pollName", value: "Led Zeppelin" } };
+  input.simulate('change', event);
+  // input.simulate('change', {
+  //   currentTarget: { value: 'Led Zeppelin' }
+  // })
   expect(FetchLib.fetchData).toHaveBeenCalledWith('Led Zeppelin')
 });
